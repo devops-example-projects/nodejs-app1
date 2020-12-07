@@ -21,7 +21,7 @@ console.log(__dirname+"/images/mithunlogo.jpg");
 */
 app.get('/welcome', function(request, response) {
     //response.send("<h2><center>Welcome to Node JS app</h2>");
-	res.set("Content-Type","text/html");
+	response.set("Content-Type","text/html");
     response.write("<h2><center><u>Node JS  Application </u></center></h2>");
 	
     response.write("<h2><center>Shiva Shiva Shiva<center></h2><br><br><h2><center>Rama Rama Rama<center></h2>" );
