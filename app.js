@@ -21,9 +21,10 @@ console.log(__dirname+"/images/mithunlogo.jpg");
 */
 app.get('/welcome', function(request, response) {
     //response.send("<h2><center>Welcome to Node JS app</h2>");
+	res.set("Content-Type","text/html");
     response.write("<h2><center><u>Node JS  Application </u></center></h2>");
 	
-    response.write("<h2><center>Shiva Shiva Shiva<center></h2>" );
+    response.write("<h2><body bgcolor="yellow"><center>Shiva Shiva Shiva<center></body></h2>" );
     response.end();
     
   })
@@ -75,7 +76,7 @@ app.get('/redirect', function(req, res) {
     
  
     app.listen(app.get('port'), function() {
-        console.log("Node JS app is running at http://localhost:" + app.get('port') +"/welcome");
+        console.log("Node JS app is running at http://192.168.152.152:" + app.get('port') +"/welcome");
       })
     
 
