@@ -24,7 +24,7 @@ app.get('/welcome', function(request, response) {
 	res.set("Content-Type","text/html");
     response.write("<h2><center><u>Node JS  Application </u></center></h2>");
 	
-    response.write("<h2 color="yellow"><center>Shiva Shiva Shiva<center></h2>" );
+    response.write("<h2><center>Shiva Shiva Shiva<center></h2><br><br><h2><center>Rama Rama Rama<center></h2>" );
     response.end();
     
   })
