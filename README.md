@@ -19,3 +19,26 @@ npm run sonar
 (OR) 
 
 node sonar-project.js
+
+# Jenkins Scripted Pipeline 
+node
+{
+	stage("CheckOut")
+	{
+		git branch: 'main', url: 'https://github.com/devops-example-projects/nodejs-app1.git'	
+	}
+	stage("Build")
+	{
+		nodejs(nodeJSInstallationName: 'NodeJS 15.3.0')
+		{
+			sh "npm install"
+		}
+	}
+	stage("Run")
+	{
+		nodejs(nodeJSInstallationName: 'NodeJS 15.3.0')
+		{
+			sh "npm start"
+		}
+	}
+}
